@@ -13,6 +13,7 @@
 		CE324C5623F557E900F5A4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE324C5523F557E900F5A4E0 /* Assets.xcassets */; };
 		CE324C5923F557E900F5A4E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE324C5823F557E900F5A4E0 /* Preview Assets.xcassets */; };
 		CE324C5C23F557E900F5A4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE324C5A23F557E900F5A4E0 /* LaunchScreen.storyboard */; };
+		CE324C6423F58ACD00F5A4E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE324C6323F58ACD00F5A4E0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE324C5823F557E900F5A4E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE324C5B23F557E900F5A4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE324C5D23F557E900F5A4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE324C6323F58ACD00F5A4E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CE324C4F23F557E400F5A4E0 /* AppDelegate.swift */,
 				CE324C5123F557E400F5A4E0 /* SceneDelegate.swift */,
 				CE324C5323F557E400F5A4E0 /* ContentView.swift */,
+				CE324C6323F58ACD00F5A4E0 /* Extensions.swift */,
 				CE324C5523F557E900F5A4E0 /* Assets.xcassets */,
 				CE324C5A23F557E900F5A4E0 /* LaunchScreen.storyboard */,
 				CE324C5D23F557E900F5A4E0 /* Info.plist */,
@@ -149,6 +152,7 @@
 				CE324C5023F557E400F5A4E0 /* AppDelegate.swift in Sources */,
 				CE324C5223F557E400F5A4E0 /* SceneDelegate.swift in Sources */,
 				CE324C5423F557E400F5A4E0 /* ContentView.swift in Sources */,
+				CE324C6423F58ACD00F5A4E0 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
