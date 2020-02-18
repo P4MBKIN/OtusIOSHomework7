@@ -8,8 +8,6 @@
 
 import Foundation
 
-let ALLOWED_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя "
-
 extension String {
     
     func isValidPhone() -> Bool
@@ -22,26 +20,22 @@ extension String {
     func isValidEmail() -> Bool
     {
         if self.isEmpty { return true }
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailRegex = "^([A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64})$"
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
     }
     
     func isValidName() -> Bool
     {
         if self.isEmpty { return false }
-        let allowed = CharacterSet(charactersIn: ALLOWED_CHARACTERS)
-        let exceptions = CharacterSet(charactersIn: "():;@\"%&+№")
-        if (self.rangeOfCharacter(from: exceptions) != nil) || (self.rangeOfCharacter(from: allowed.inverted) != nil) {
-            return false
-        }
-        return true
+        let nameRegex = "^((([A-Z][a-z]+\\s)|([А-Я][а-я]+\\s))*(([A-Z][a-z]+)|([А-Я][а-я]+)))$"
+        return NSPredicate(format: "SELF MATCHES %@", nameRegex).evaluate(with: self)
     }
     
-    ///yyyy-mm-dd
+    ///dd-mm-yyyy
     func isValidBirthDate() -> Bool
     {
         if self.isEmpty { return false }
-        let dateRegex = "^(19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$"
+        let dateRegex = "^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\\d\\d$"
         return NSPredicate(format: "SELF MATCHES %@", dateRegex).evaluate(with: self)
     }
     
